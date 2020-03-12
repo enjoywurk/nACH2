@@ -23,6 +23,28 @@ describe('Entry', function(){
       });
     });
   });
+});
+
+describe('Batch', function(){
+  describe('Create Batch', function(){
+    it('should create an batch successfully', function(){
+      var entry = new Batch({
+        serviceClassCode: '220',
+        standardEntryClassCode: 'CCD',
+        companyName: 'ABISF',
+        companyIdentification: '58473723',
+        companyEntryDescription: 'Payroll',
+        companyDescriptiveDate: '031320',
+        effectiveEntryDate: '031320',
+        originatingDFI: '302075306'
+      });
+      entry.generateString(function(string) {
+        console.log(string);
+      });
+    });
+  });
+});
+
   describe('Create Entry with addenda', function(){
     it('should create an entry with an addenda successfully', function(){
       var entry = new Entry({
@@ -57,4 +79,3 @@ describe('Entry', function(){
       });
     });
   });
-});
