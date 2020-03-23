@@ -14,8 +14,8 @@ describe('Entry', function(){
     		DFIAccount: '12345678901234567',
     		amount: '3521',
         transactionCode: '22',
-    		idNumber: 'RAj##23920rjf31',
-    		individualName: 'Glen Selle',
+    		idNumber: 'RAj##23,20rjf31',
+    		individualName: 'Glen, Selle',
     		discretionaryData: 'A1'
     	});
       entry.generateString(function(string) {
